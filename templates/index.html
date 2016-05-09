@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ana Sayfa</title>
+</head>
+<body>
+
+
+{% if request.user %}
+    <p>MErhaba {{ request.user.first_name }} - <a href="/cikis/">çıkış</a></p>
+{% else %}
+    <p><a href="/giris/">Giriş yap</a></p>
+{% endif %}
+
+</body>
+</html>
